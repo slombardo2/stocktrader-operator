@@ -33,12 +33,12 @@ database:
   db: trader
 portfolio:
   image:
-    repository: ibmstocktrader/portfolio
+    repository: slombardo2/portfolio
     tag: latest
   url: http://{{ .Release.Name }}-portfolio-service:9080/portfolio
 stockQuote:
   image:
-    repository: ibmstocktrader/stock-quote
+    repository: slombardo2/stock-quote
     tag: latest
   url: http://{{ .Release.Name }}-stock-quote-service:9080/stock-quote
   apiConnect: https://api.us.apiconnect.ibmcloud.com/jalcornusibmcom-dev/sb/stocks
@@ -47,40 +47,40 @@ stockQuote:
 trader:
   enabled: true
   image:
-    repository: ibmstocktrader/trader
+    repository: slombardo2/trader
     tag: latest
 tradr:
   enabled: false
   image:
-    repository: ibmstocktrader/tradr
+    repository: slombardo2/tradr
     tag: latest
 messaging:
   enabled: false
   image:
-    repository: ibmstocktrader/messaging
+    repository: slombardo2/messaging
     tag: latest
   notification:
     url: http://{{ .Release.Name }}-notification-service:9080/notification
 notificationSlack:
   enabled: false
   image:
-    repository: ibmstocktrader/notification-slack
+    repository: slombardo2/notification-slack
     tag: latest
 notificationTwitter:
   enabled: false
   image:
-    repository: ibmstocktrader/notification-twitter
+    repository: slombardo2/notification-twitter
     tag: latest
 tradeHistory:
   enabled: false
   image:
-    repository: ibmstocktrader/trade-history
+    repository: slombardo2/trade-history
     tag: latest
   url: http://{{ .Release.Name }}-trade-history-service:9080/trade-history
 looper:
   enabled: false
   image:
-    repository: ibmstocktrader/looper
+    repository: slombardo2/looper
     tag: latest
   url: http://{{ .Release.Name }}-looper-service:9080/looper
 jwt:
