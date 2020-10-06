@@ -7,8 +7,8 @@ metadata:
     capabilities: Basic Install
     createdAt: 2020-01-31 16:00:00
     support: IBM
-    containerImage: ibmstocktrader/stocktrader-operator:latest
-    repository: https://github.com/IBMStockTrader/stocktrader-operator
+    containerImage: slombardo2/stocktrader-operator:latest
+    repository: https://github.com/slombardo2/stocktrader-operator
     alm-examples: |-
       [
         {
@@ -55,7 +55,7 @@ metadata:
             "looper": {
               "enabled": false,
               "image": {
-                "repository": "ibmstocktrader/looper",
+                "repository": "slombardo2/looper",
                 "tag": "latest"
               },
               "url": "http://{{ .Release.Name }}-looper-service:9080/looper"
@@ -63,7 +63,7 @@ metadata:
             "messaging": {
               "enabled": false,
               "image": {
-                "repository": "ibmstocktrader/messaging",
+                "repository": "slombardo2/messaging",
                 "tag": "latest"
               },
               "notification": {
@@ -90,14 +90,14 @@ metadata:
             "notificationSlack": {
               "enabled": false,
               "image": {
-                "repository": "ibmstocktrader/notification-slack",
+                "repository": "slombardo2/notification-slack",
                 "tag": "latest"
               }
             },
             "notificationTwitter": {
               "enabled": false,
               "image": {
-                "repository": "ibmstocktrader/notification-twitter",
+                "repository": "slombardo2/notification-twitter",
                 "tag": "latest"
               }
             },
@@ -118,7 +118,7 @@ metadata:
             },
             "portfolio": {
               "image": {
-                "repository": "ibmstocktrader/portfolio",
+                "repository": "slombardo2/portfolio",
                 "tag": "latest"
               },
               "url": "http://{{ .Release.Name }}-portfolio-service:9080/portfolio"
@@ -132,7 +132,7 @@ metadata:
               "iexApiKey": "\u003cyour IEX API key\u003e",
               "iexTrading": "https://cloud.iexapis.com/stable/stock",
               "image": {
-                "repository": "ibmstocktrader/stock-quote",
+                "repository": "slombardo2/stock-quote",
                 "tag": "latest"
               },
               "url": "http://{{ .Release.Name }}-stock-quote-service:9080/stock-quote"
@@ -140,7 +140,7 @@ metadata:
             "tradeHistory": {
               "enabled": false,
               "image": {
-                "repository": "ibmstocktrader/trade-history",
+                "repository": "slombardo2/trade-history",
                 "tag": "latest"
               },
               "url": "http://{{ .Release.Name }}-trade-history-service:9080/trade-history"
@@ -148,14 +148,14 @@ metadata:
             "trader": {
               "enabled": true,
               "image": {
-                "repository": "ibmstocktrader/trader",
+                "repository": "slombardo2/trader",
                 "tag": "latest"
               }
             },
             "tradr": {
               "enabled": false,
               "image": {
-                "repository": "ibmstocktrader/tradr",
+                "repository": "slombardo2/tradr",
                 "tag": "latest"
               }
             },
@@ -879,7 +879,7 @@ spec:
                       fieldPath: metadata.name
                 - name: OPERATOR_NAME
                   value: stocktrader-operator
-                image: ibmstocktrader/stocktrader-operator:latest
+                image: slombardo2/stocktrader-operator:latest
                 imagePullPolicy: Always
                 name: stocktrader-operator
                 resources: {}
@@ -1018,7 +1018,7 @@ spec:
     name: IBM
   links:
     - name: IBM Stock Trader on GitHub
-      url: https://github.com/IBMStockTrader
+      url: https://github.com/slombardo2
     - name: Cloud Engagement Hub on Medium
       url: https://medium.com/cloud-engagement-hub
     - name: Cloud Native Programming Model
