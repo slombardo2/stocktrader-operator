@@ -18,7 +18,7 @@ name: stocktrader
 version: 1.0.0
 icon: https://raw.githubusercontent.com/IBMStockTrader/stocktrader-helm/master/stock-trader-icon.png
 sources:
-  - http://github.com/IBMStockTrader
+  - http://github.com/slombardo2
 maintainers:
   - name: John W. Alcorn
   - email: jalcorn@us.ibm.com
