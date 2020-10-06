@@ -16,7 +16,7 @@ spec:
       containers:
         - name: stocktrader-operator
           # Replace this with the built image name
-          image: ibmstocktrader/stocktrader-operator:latest
+          image: slombardo2/stocktrader-operator:latest
           imagePullPolicy: Always
           env:
             - name: WATCH_NAMESPACE
