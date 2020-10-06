@@ -37,13 +37,13 @@ spec:
   looper:
     enabled: false
     image:
-      repository: ibmstocktrader/looper
+      repository: slombardo2/looper
       tag: latest
     url: http://{{ .Release.Name }}-looper-service:9080/looper
   messaging:
     enabled: false
     image:
-      repository: ibmstocktrader/messaging
+      repository: slombardo2/messaging
       tag: latest
     notification:
       url: http://{{ .Release.Name }}-notification-service:9080/notification
@@ -65,12 +65,12 @@ spec:
   notificationSlack:
     enabled: false
     image:
-      repository: ibmstocktrader/notification-slack
+      repository: slombardo2/notification-slack
       tag: latest
   notificationTwitter:
     enabled: false
     image:
-      repository: ibmstocktrader/notification-twitter
+      repository: slombardo2/notification-twitter
       tag: latest
   odm:
     id: odmAdmin
@@ -86,7 +86,7 @@ spec:
     url: https://openwhisk.ng.bluemix.net/api/v1/namespaces/jalcorn%40us.ibm.com_dev/actions/PostLoyaltyLevelToSlack
   portfolio:
     image:
-      repository: ibmstocktrader/portfolio
+      repository: slombardo2/portfolio
       tag: latest
     url: http://{{ .Release.Name }}-portfolio-service:9080/portfolio
   redis:
@@ -97,24 +97,24 @@ spec:
     iexApiKey: <your IEX API key>
     iexTrading: https://cloud.iexapis.com/stable/stock
     image:
-      repository: ibmstocktrader/stock-quote
+      repository: slombardo2/stock-quote
       tag: latest
     url: http://{{ .Release.Name }}-stock-quote-service:9080/stock-quote
   tradeHistory:
     enabled: false
     image:
-      repository: ibmstocktrader/trade-history
+      repository: slombardo2/trade-history
       tag: latest
     url: http://{{ .Release.Name }}-trade-history-service:9080/trade-history
   trader:
     enabled: true
     image:
-      repository: ibmstocktrader/trader
+      repository: slombardo2/trader
       tag: latest
   tradr:
     enabled: false
     image:
-      repository: ibmstocktrader/tradr
+      repository: slombardo2/tradr
       tag: latest
   twitter:
     accessToken: <your access token>
