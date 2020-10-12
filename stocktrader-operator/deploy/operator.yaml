@@ -10,7 +10,7 @@ spec:
   template:
     metadata:
       labels:
-        name: stocktrader-operator
+        name: stocktrader-operato
     spec:
       serviceAccountName: stocktrader-operator
       containers:
